@@ -2,10 +2,11 @@
 纯真IP数据库解析
 
 # 使用
-from qqwry import IPLoader
 
-ip = IPLoader('../qqwry.dat')
-ip_info = ip.get_ip_address_info('114.114.114.114')
+	from qqwry import IPLoader
+
+	ip = IPLoader('../qqwry.dat')
+	ip_info = ip.get_ip_address_info('114.114.114.114')
 
 {
     "code": 0, 
