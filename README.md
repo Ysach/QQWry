@@ -5,7 +5,7 @@
 
 	from qqwry import IPLoader
 
-	ip = IPLoader('../qqwry.dat')
+	ip = IPLoader('qqwry.dat')
 	ip_info = ip.get_ip_address_info('114.114.114.114')
 	
 
