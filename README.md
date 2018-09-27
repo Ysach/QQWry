@@ -40,6 +40,12 @@
 		}
 	}
 
+# 线上API接口地址
+## API: https://www.ruyione.com/api/
+## 使用 GET方法
+	https://www.ruyione.com/api/?ip=1.1.1.1
+## 使用 POST 方法
+	curl https://www.ruyione.com/api/ -X POST -d "ip=1.1.1.1"
 
 # 纯真数据库格式
 	QQWry.Dat的格式如下:
