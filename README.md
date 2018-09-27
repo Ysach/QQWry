@@ -9,7 +9,7 @@
 	ip_info = ip.get_ip_address_info('114.114.114.114')
 	
 
-# 正确的数据返回JSON格式
+# 正确的数据返回JSON内容如下
 
 	{
 		"code": 0, 
