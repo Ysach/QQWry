@@ -12,7 +12,7 @@ QQWry IP数据库 纯真版收集了包括中国电信、中国移动、中国�
 # Django使用
 
 	Django通过request.GET.get()得到的字符是Unicode，范例如下：
-	```
+	
 	def index(request):
     ip_dict = dict({"code": "", "data": {"ip": "", "info": "", "location": ""}})
     if request.method == "GET":
@@ -33,7 +33,7 @@ QQWry IP数据库 纯真版收集了包括中国电信、中国移动、中国�
             return HttpResponse(json.dumps(ip_dict, indent=4, ensure_ascii=False))
         ip_info = IPLoader("QQWry/qqwry.dat").get_ip_address_info(ip.encode('utf-8'))
         return HttpResponse(ip_info)
-	```
+		
 # 正确的数据返回JSON内容如下
 
 	{
