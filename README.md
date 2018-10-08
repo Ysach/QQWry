@@ -16,13 +16,15 @@ QQWry IP数据库 纯真版收集了包括中国电信、中国移动、中国�
 	def index(request):
     ip_dict = dict({"code": "", "data": {"ip": "", "info": "", "location": ""}})
     if request.method == "GET":
-		**ip = request.GET.get('ip', None)**
+		```
+		ip = request.GET.get('ip', None)
+		```
         if ip is None:
             ip_dict["code"] = 0
             ip_dict["data"]["info"] = "请输入正确的KEY值或者非空的值,如:http://x.x.x.x?ip=8.8.8.8"
 
             return HttpResponse(json.dumps(ip_dict, indent=4, ensure_ascii=False))
-        ip_info = IPLoader("QQWry/qqwry.dat").get_ip_address_info(**ip.encode('utf-8')**)
+        ip_info = IPLoader("QQWry/qqwry.dat").get_ip_address_info(```ip.encode('utf-8')```)
         return HttpResponse(ip_info)
     if request.method == "POST":
         ip = request.POST.get('ip', None)
@@ -31,7 +33,7 @@ QQWry IP数据库 纯真版收集了包括中国电信、中国移动、中国�
             ip_dict["data"]["info"] = "请输入正确的KEY值或者非空的值,如:http://x.x.x.x?ip=8.8.8.8"
 
             return HttpResponse(json.dumps(ip_dict, indent=4, ensure_ascii=False))
-        ip_info = IPLoader("QQWry/qqwry.dat").get_ip_address_info(**ip.encode('utf-8')**)
+        ip_info = IPLoader("QQWry/qqwry.dat").get_ip_address_info(```ip.encode('utf-8')```)
         return HttpResponse(ip_info)
 		
 # 正确的数据返回JSON内容如下
